@@ -1,0 +1,348 @@
+:root {
+  --fuenteHeading: "PT Sans", sans-serinf;
+  --fuenteParrafos: "Open Sans", sans-serinf;
+
+  --primario: #78403c;
+  --blanco: #ffffff;
+  --gris: #e1e1e1;
+  --negro: #000000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* globales */
+
+.contenedor {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+* {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuenteHeading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* utilidades */
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.boton {
+  background-color: var(--negro);
+
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+  border: none;
+
+  font-family: var(--fuenteHeading);
+}
+
+.boton:hover{
+cursor: pointer;
+}
+
+.boton--primario {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    display: inline-block;
+  }
+}
+
+.boton--secundario {
+  background-color: var(--primario);
+}
+
+/* header */
+
+.header {
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 60rem;
+}
+
+.header__texto {
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 5rem;
+}
+
+.barra {
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  color: var(--blanco);
+}
+
+.logo__nombre {
+  font-weight: 400;
+}
+
+.logo__bold {
+  column-count: var(--primario);
+  font-weight: 700;
+}
+
+/* para centrar el header */
+
+.header__texto {
+  margin-top: 6rem;
+}
+
+@media (min-width: 768px) {
+  .header__texto {
+    margin-top: 12rem;
+  }
+}
+
+/* navegacion */
+
+.navegacion__enlace {
+  margin-top: 2rem;
+
+  color: var(--blanco);
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navegacion {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .navegacion__enlace {
+    margin-top: 0;
+    display: inline;
+  }
+}
+
+/* contenido-principal */
+
+@media (min-width: 768px) {
+  .contenido-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.cursos {
+  list-style: none;
+}
+
+.entrada {
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+  border: none;
+  margin: 0;
+}
+
+.widget-curso {
+  border-bottom: 1px solid var(--gris);
+  margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type {
+  border: none;
+  margin: 0;
+}
+
+.widget-curso__label {
+  font-family: var(--fuenteParrafos);
+  font-weight: 700;
+}
+
+.widget-curso__info {
+  font-weight: 400;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+  font-size: 2rem;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 3rem;
+
+  background-color: var(--negro);
+  height: 30rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    height: 10rem;
+  }
+}
+
+/* seccion "nosotros" */
+
+@media (min-width: 768px) {
+  .sobre-nosotros {
+    display: flex;
+    gap: 4rem;
+  }
+  .sobre-nosotros__imagen,
+  .sobre-nosotros__texto {
+    flex: 1;
+  }
+}
+
+/* seccion "clases" */
+
+.clases {
+  padding: 2rem;
+
+  border-bottom: 1px solid var(--gris);
+
+  margin: 2rem;
+}
+
+.clases:last-of-type {
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .clases {
+    display: flex;
+    gap: 4rem;
+  }
+  .clases__imagen,
+  .clases__texto {
+    flex: 1;
+  }
+}
+
+/* seccion "entrada" */
+/* no se hizo nada XD (se ahorra artas lineas de codigo) */
+/* fin seccion entrada */
+
+/* seccion "contacto" */
+
+.contacto-bg {
+  background-image: url(../img/contacto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 40rem;
+}
+
+/* seccion "contacto" */
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto;
+  width: 95%;
+  padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    text-align: right;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+}
+
+.campo__field {
+    width: 100%;
+
+    border: 1px solid var(--negro);
+
+    padding: 1rem;
+
+    flex: 1;
+}
+
+.campo__field--textarea {
+    border: 1px solid var(--negro);
+
+    width: 100%;
+    max-height: 12rem;
+}
